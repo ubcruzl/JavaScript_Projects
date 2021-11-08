@@ -16,3 +16,26 @@ function myFunctionConcatenate() {                      //Defining a function
     document.getElementById("concatenate").innerHTML=sentence.fontcolor("green"); //Putting the value
                                                         //of result into HTML element with "concatenate" id an assing font color green
 }
+function myFunctionDOM() {                      //Defining a function
+    var x = document.getElementById("demoDOM");    //Defining a variable 
+    x.style.color = "red";
+}
+function demoMyFunction() {                     //Defining a function
+    var xa=factorial(10)                        //Defining a variable  and call function factorial
+    //document.getElementById("demoFunction").innerHTML = myFunction(4,3);
+    document.getElementById("demoFunction").innerHTML=xa; //Putting the value of result into HTML element demoFunction
+}
+
+function factorial(x){                          //Defining a function
+    if (x==0){                                  //desicion
+        return 1;
+    }
+    else{ return x*factorial(x-1);              //Function recursive
+    }
+}
+
+function additionFunction(){
+    var x=2, y=2;
+    var addition=x+y;
+    document.getElementById("Math").innerHTML=x+y+addition;
+}
