@@ -1,11 +1,11 @@
-function countDown(){                               //declare function
+function countDown(){
     var seconds=document.getElementById("seconds").value;
-    function tick(){                                //declare function
+    function tick(){
         seconds=seconds-1;
         TimeRanges.innerHTML=seconds;
         var timer= setTimeout(tick,1000);
         document.getElementById("timer").innerHTML=timer;
-        if (seconds==-1){                           //declare decision
+        if (seconds==-1){
             alert("Time's up!");
             clearTimeout(timer);
             timer.innerHTML="";
