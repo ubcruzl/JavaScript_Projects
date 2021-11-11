@@ -3,55 +3,38 @@
     <!-- <script>alert("Helllo, World!")</script> -->
     <head>
         <meta charset="UTF=8">
-        <script src="JS/main.js"></script>
+        
         <link rel="stylesheet" type= "text/css" href="CSS/main.css">
     </head>
 	<header>
-        <h2>ASIGNACIÓN DE ENVÍO DE PROJECT8_STRING_METHODS</h2>
+        <h2>COURSE JAVA SCRIPT</h2>
 	</header>
-    <body onload="showSlides(1)">        <!-- onload call function showSlides() in main.js -->   
-        <div class="PROGRAM_JAVA">
-            <!-- JAVASCRIPT PROGRAM -->
-            <h2>CREATING A JAVASCRIPT PROGRAM</h2>
-            <p>How many seconds would you like to set your alarm for?:</p>
-            <input id="seconds" value="">
-            <button onclick="countDown()">Click here</button>   <!-- button call function countDown() in main.js -->
-            <p id="timer"></p>
+    <body>          
+        <div class="diV-container">
+            <!-- ASYNC ASSIGNMENT -->
+            <script src="JS/async.js" async></script>
+            <h2>ASYNC ASSIGNMENT</h2>
+            <p id="p1">Hello World:</p>
         </div>
-        
-        <p>Slideshow :</p>
-        <!-- Slideshow container -->
 
-        <div class="slideshow-container"> <!-- div class container -->
+        <!-- DEFER JAVASCRIPT -->
+        <div class="diV-container">
+            <h2>The script defer attribute</h2>
+            <script id="myScript" src="JS/defer_1.js" defer></script>
 
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="Image/image4.jpg" style="width:100%">      <!-- container img -->         
-              <div class="text">Caption Text</div>
-            </div>
+            <p>The script above requests information from the paragraph below. Normally, this is not possible, because the script is executed before the paragraph exists.</p>
+    
+            <p id="p1">Hello World!</p>
+    
+            <p>However, the defer attribute specifies that the script should be executed later. This way the script can request information from the paragraph.</p>
             
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="Image/image1.jpg" style="width:100%">       <!-- container img -->  
-              <div class="text">Caption Two</div>
-            </div>
+            <p>You can double-check if the script was executed later, by clicking the button below.</p>
             
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="Image/image3.jpg" style="width:100%">       <!-- container img -->  
-              <div class="text">Caption Three</div>
-            </div>
+            <button onclick="myFunction()">Try it</button>
             
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-            </div>
+            <p id="demo"></p>
+    
+        </div>
+     
     </body>
 </html>
