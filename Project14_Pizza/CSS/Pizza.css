@@ -1,0 +1,89 @@
+/* HTML PIZZA MENU ASSIGNMENTT*/
+
+#menuBG {
+    width: 600px;
+    height: 470px;
+    margin: 10px auto;
+}
+
+#frmMenu {
+    width: 600px;
+    height: 200px;
+}
+
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 20px auto;
+    float: right;
+}
+
+.container {
+    display: grid;
+    background-color: rgb(157, 184, 235);
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    float: center;
+}
+
+.right {
+    width:200px;
+    height: 200px;
+    float: right;
+}    
+
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    top:0;
+    margin: 0px auto;
+    width: 400px;
+    height: 200px;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 25px auto;
+    background-color: rgb(49, 94, 146);
+}
+
+body {
+    background-color: rgba(103, 116, 103, 0.863);
+  }
+
+h1 {
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Arial', serif;
+    font-size: xx-large;
+    text-align: center;
+}
+
+h3 {
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Arial', serif;
+}
+
+div {
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Arial', serif;
+}
