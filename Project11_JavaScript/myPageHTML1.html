@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <script>alert("Helllo, World!")</script> -->
+    <head>
+        <meta charset="UTF=8">
+        <script src="JS/main.js"></script>
+        <link rel="stylesheet" type= "text/css" href="CSS/main.css">
+    </head>
+	<header>
+        <h2>ASIGNACIÓN DE ENVÍO</h2>
+	</header>
+    <body>           
+        <div id="div-container">
+            <h2>SWITCH STATEMENT </h2>
+            <p>Select option </p>
+            <form>
+                <select id="option" onchange="fnSwitch()">
+                  <option value="0">White</option>
+                  <!--- <option value="2" selected="selected">test2</option> -->
+                  <option value="1">Yellow</option>
+                  <option value="2">Green</option>
+                  <option value="3">Blue</option>
+                  <option value="4">Pink</option>
+                  <option value="5">Purple</option>
+                  <option value="6">Red</option>
+                </select>
+            </form>
+            <p id="output"></p>
+        </div>
+         <!-- GETELEMENTSBYCLASSNAME() METHOD -->
+        <div class="div-container-1">
+            <h2>GETELEMENTSBYCLASSNAME() METHOD </h2>
+            <h1 class="click">This text will change</h1>
+            <h3 class="click">This text will NOT change</h3>
+            <button onclick="fnHelloWorld()">Click me!</button>
+        </div>
+        <div class="div-container-canvas">
+            <h2>HTML CANVAS ELEMENT </h2>
+            <p>Click inside the box</p>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;" onclick="fnCanvas()">
+                Your browser does not support the HTML canvas tag.</canvas>
+            </canvas>
+            <h2>HTML CANVAS ELEMENT, GRADIENT COLOR</h2>
+            <p>Click inside the box</p>
+            <canvas id="myCanvas1" width="300" height="150" style="border:1px solid #d3d3d3;" onclick="fnCanvasGradient()"">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+                    
+            </canvas>
+        </div>  
+    </body>
+</html>
