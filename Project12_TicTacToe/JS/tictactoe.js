@@ -14,11 +14,11 @@ function placeXOrO(squareNumber) {
         //this condition checks who's turn it is
         if (activePlayer=== 'X') {
             //if active player is equal to 'X', the x.png is placed in html
-            select.style.backgroundImage = 'url("./Images/x.png")';
+            select.style.backgroundImage = 'url("./Images/xx.png")';
         //active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
             //if activePlayer is equal to 'O', the o.png is placed in html
-            select.style.backgroundImage = 'url("./Images/o.png")';
+            select.style.backgroundImage = 'url("./Images/oo.png")';
         }
         //squareNumber and activePlayer are concatenated together and added to array
         selectedSquares.push(squareNumber + activePlayer);
@@ -36,7 +36,7 @@ function placeXOrO(squareNumber) {
 
         
         //this function plays placement sound
-        audio('./Media/place.mp3');
+        audio('./Media/mixkit-police-short-whistle-615.wav');
         //this condition checks to see if it is computers turn
         if(activePlayer === 'O'){
             //this function disables clicking for computer choice
@@ -108,7 +108,7 @@ function checkWinConditions() {
     // and 9 squares are selected, the code executes
     else if (selectedSquares.length >= 9) {
         //this function plays the tie game sound
-        audio('./Media/tie.mp3');
+        audio('./Media/mixkit-big-wild-cat-long-purr-96.wav');
         //this function sets a .3 second timer before the resetGame is called
         setTimeout(function () { resetGame(); }, 1000);
     }
@@ -209,7 +209,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line disallows clicking while the win sound is playing 
     disableClick();
     //this line plays the win sounds
-    audio('./Media/winGame.mp3');
+    audio('./Media/mixkit-big-wild-cat-scary-roar-88.wav');
     //this line calls our main animation loop
     animateLineDrawing();
     //this line waits 1 second
