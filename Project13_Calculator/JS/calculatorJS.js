@@ -1,13 +1,14 @@
 /// CALCULATOR SUBMISSION ASSIGNMENT
 //JAVASCRIPT CALCULATOR
+//object keep track oj values
 const Calculator = {
-    Display_Value: '0', // 
-    First_Operand: null, // 
+    Display_Value: '0', // dysplay 0
+    First_Operand: null, // hold the firs operand
     Wait_Second_Operand: false, // T
     operator: null, // 
 };
 
-function Input_Digit(digit) {
+function Input_Digit(digit) {       //funcion modifies values each time a button is clicked
     const { Display_Value, Wait_Second_Operand } = Calculator;
 
     if (Wait_Second_Operand === true) {
@@ -19,7 +20,7 @@ function Input_Digit(digit) {
     }
 }
 
-function Input_Decimal(dot) {
+function Input_Decimal(dot) {       //This section handles decimal points
 
     if (Calculator.Wait_Second_Operand === true) return;
     if (!Calculator.Display_Value.includes(dot)) {
@@ -27,7 +28,7 @@ function Input_Decimal(dot) {
     }
 }
 
-function Handle_Operator(Next_Operator) {
+function Handle_Operator(Next_Operator) {   //This section handles operators    
     const { First_Operand, Display_Value, operator} = Calculator
 
     const Value_of_Input = parseFloat(Display_Value);
@@ -41,14 +42,13 @@ function Handle_Operator(Next_Operator) {
     }   else if (operator) { 
         const Value_Now = First_Operand || 0;
         const result = Perform_Calculation[operator](Value_Now, Value_of_Input);
-        
         Calculator.Display_Value = String(result);
         Calculator.First_Operand = result;
     }
     Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
 }
-const Perform_Calculation = {
+const Perform_Calculation = {                   //The const keyword ensures that the variable it creates is read-only.
     '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
@@ -56,17 +56,17 @@ const Perform_Calculation = {
     '=': (First_Operand, Second_Operand) => Second_Operand
 };
 
-function Calculator_Reset() {
+function Calculator_Reset() {               //
     Calculator.Display_Value = '0';
     Calculator.First_Operand = null;
     Calculator.Wait_Second_Operand = false;
     Calculator.operator = null;
 }
-function Update_Display() {
+function Update_Display() {                 //
     const display = document.querySelector('.calculator-screen');
     display.value = Calculator.Display_Value;
 }
-Update_Display() ;
+Update_Display();
 const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
 
