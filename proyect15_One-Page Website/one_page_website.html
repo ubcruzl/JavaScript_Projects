@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Centros | Ceremoniales</title>
+		<link rel="stylesheet" href="css/one_page_website.css">
+		<link rel="stylesheet" href="css/animations.css"> 
+		<script src="JSS/one_page_website.js"></script> 
+	</head>
+	<body>
+		<header>
+			<h1><br> Centros | Ceremoniales</h1>
+		</header>
+		
+		<!-- NAV -->
+		<div class="wrap">
+			<div class="menu-container">
+				<ul class="menu">
+					<a href="#home"><li>HOME</li></a>
+					<a href="#gallery"><li>GALLERY</li></a>
+					<a href="#contact"><li>VISIT</li></a>
+					<a href="#videos"><li>VIDEOS</li></a>
+				</ul>
+			</div>
+		</div>
+		<!--END NAV -->
+
+		<!--HOME -->
+		<div id="home">
+			<div class="container">
+				<div class="text-center">
+					<span class="head-main">Mi pueblo mazahua, visitanos </span>
+				</div>					
+			</div>		
+		</div>		
+		<!--HOME -->
+		
+		<!--GALLERY -->
+		<section id="gallery">
+
+			<div class="container">
+			
+				<h1>Gallery </h1>
+				<div class="flex-container">
+				
+					<!--Photo container 1 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/cultura.jpg" alt="Cultura Mazahua"  width="350" height="250">
+							<div class="photo-overlay" onclick="openModal();currentSlide(1)">
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>Conoce el pueblo mazagua y sus tradicioes, programa una visita!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->		
+
+					<!--Photo container 2 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/gastronomia.jpg" alt="Gastronomia mazahua" width="350" height="250">
+							<div class="photo-overlay" onclick="openModal();currentSlide(2)">
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>Conoce la comida del pueblo mazahua, programa una visita!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->	
+					
+					<!--Photo container 3 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/sitios.jpg" alt="Visita lugares" width="300" height="200">
+							<div class="photo-overlay" onclick="openModal();currentSlide(3)">
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>Hay diversos sitios por conocer, visitanos!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->		
+
+					<!--Photo container 4 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/tradiciones.jpg" alt="Tradiciones Mazahuas"  width="300" height="200">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>Diversas tradiciones, ven a conocer!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->		
+	
+					<!--Photo container 5 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/souvenir.jpg" alt="Conoce souvenir" onclick="openModal();currentSlide(5)" width="300" height="200">
+							<div class="photo-overlay" onclick="openModal();currentSlide(4)">
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>Se ofrecen diferentes souvenir, Ven con nosotros!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->		
+	
+					<!--Photo container 6 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/plata.jpg" alt="Souvenir en plata" width="300" height="200">
+							<div class="photo-overlay" onclick="openModal();currentSlide(6)">
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>Souvenirs en plata, conocelos!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->		
+
+					<!--Photo container 7 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/artesanias.jpg" alt="Sonoce su artesania" width="300" height="200">
+							<div class="photo-overlay" onclick="openModal();currentSlide(7)" >
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>Diferentes artesanias, ven a cnocerlos!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->		
+
+					<!--Photo container 8 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/historia.jpg" alt="Conoce su historia" width="300" height="200">
+							<div class="photo-overlay" onclick="openModal();currentSlide(8)">
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>Conoce su historia, visitas guiadas!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->				
+
+					<!--Photo container 9 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/dialecto.jpg" alt="Conoce su dialecto" width="300" height="200">
+							<div class="photo-overlay" onclick="openModal();currentSlide(9)">
+								<h3 class="white-head">Click to enlarge </h3>
+								<p>many pets who want a new home this day, make an appointment!</p>
+							</div>	
+						</div>	
+					</div>	
+					<!--END Photo container -->		
+				</div>
+
+				<!--END GALLERY first 1-->
+
+				<!--GALLERY Slide-->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				
+					<div class="mySlides">
+						<div class="numbertext">1 / 9</div>
+						<img src="./images/cultura.jpg" width="1050" height="750" class="center">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">2 / 9</div>
+						<img src="./images/gastronomia.jpg" width="1050" height="750" class="center">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">3 / 9</div>
+						<img src="./images/sitios.jpg" width="1050" height="750" class="center">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">4 / 9</div>
+						<img src="./images/tradiciones.jpg" width="1050" height="750" class="center">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">5 / 9</div>
+						<img src="./images/souvenir.jpg" width="1050" height="750" class="center">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">6 / 9</div>
+						<img src="./images/plata.jpg" width="1050" height="750" class="center">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">7 / 9</div>
+						<img src="./images/artesanias.jpg" width="1050" height="750" class="center">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">8 / 9</div>
+						<img src="./images/historia.jpg" width="1050" height="750" class="center">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">9 / 9</div>
+						<img src="./images/dialecto.jpg" width="1050" height="750" class="center">
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<div class="caption-container">
+						<p id="caption">here captio</p>
+					</div>
+					<br>
+
+					<div class="column">
+						<img class="demo cursor" src="./images/cultura.jpg" style="width:50%" onclick="currentSlide(1)" alt="not found">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="./images/gastronomia.jpg" style="width:50%" onclick="currentSlide(2)" alt="not found">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="./images/sitios.jpg" style="width:50%" onclick="currentSlide(3)" alt="not found">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="./images/tradiciones.jpg" style="width:50%" onclick="currentSlide(4)" alt="not found">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="./images/souvenir.jpg" style="width:50%" onclick="currentSlide(5)" alt="not found">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="./images/plata.jpg" style="width:50%" onclick="currentSlide(6)" alt="not found">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="./images/artesanias.jpg" style="width:50%" onclick="currentSlide(7)" alt="not found">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="./images/historia.jpg" style="width:50%" onclick="currentSlide(8)" alt="not found">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="./images/dialecto.jpg" style="width:50%" onclick="currentSlide(9)" alt="not found">
+					</div>
+
+					</div>
+				</div>
+				<!--END GALLERY Slide-->
+			</div>
+		</section>
+		<!--END GALLERY-->
+
+		<!-- SECTION VIDEOS -->
+		<div class="videoWrapper" id="videos">
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/iKh5QCQVals"> title="Mi sitio Mazahua">
+			</iframe>
+		</div>	
+
+		<!--END VIDEOS -->
+
+		<!--RSVP -->
+		<section id="contact">
+			<div class="container">
+				<div class="heading-padding">
+					<h1 class="heading-padding">Appointments  </h1>
+					<div class="reservation">
+						<h2><span>The Mazahua people are waiting for you,, schedule soon.</span>
+						<br /> make a reservation today!
+						</h2>
+						<p class="rsvp-text">
+							Please provide us with your basic contact information.
+						</p>
+						<div class="form-rsvp">
+							<form action="" method="post">
+								<input class="rsvp" type="text" value="First name">
+								<input class="rsvp" type="text" value="Last name">
+								<input class="rsvp" type="text" value="Email address">
+								<input class="rsvp" type="text" value="Phone Number">
+								<div>
+									<label class="terms" >Terms and Conditions</label>
+								</div>
+								<div class="submit">
+									<input type="Submit" value="Submit">
+								</div>
+							</form>
+						</div>
+					</div>					
+				</div>		
+			</div>		
+			</section>
+		<!--END RSVP -->
+		<!-- FOOTER -->
+		<div>
+			www.thespacestations.space &nbsp;|&nbsp; &copy; 2016
+		</div>			
+		<!--END FOOTER -->
+						
+	</body>
+</html>
