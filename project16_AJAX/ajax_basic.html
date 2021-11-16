@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="CSS/style.css">
+        <script src="JS/ajax.js"></script> <!-- --> 
+    </head>
+    <body>
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<div class='content' id="content">
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+			</div>
+            <!-- -->
+            <h2>The responseText Property</h2>
+            <div class="content">
+                <p>The responseText property returns the server response as a JavaScript string.</p>
+                <button type="button" onclick="loadDoc();">Change Content TEXT</button>
+                <p id="demo"></p>
+            </div>
+            <!-- -->
+            <h2>The getResponseHeader()</h2>
+            <div class="content">
+                <p>The getResponseHeader() function is used to return specific header information from a resource, like length, server-type, <br> 
+                    content-type, last-modified, etc: <br></p>
+                <button type="button" onclick="loadDoc1();">Change Content TEXT</button>
+                <p id="demo1"></p>
+            </div>
+            <!-- -->
+            <h2>The getAllResponseHeaders()</h2>
+            <div class="content">
+                <p>TThe getAllResponseHeaders() function returns all the header information of a resource, like length, server-type, content-type, <br>
+                    last-modified, etc: <br></p>
+                <button type="button" onclick="loadDoc2();">Change Content TEXT</button>
+                <p id="demo2"></p>
+            </div>
+            <!-- -->
+            <h2>The responseXML Property.</h2>
+            <div id="demo2" class="content">
+                <p>The responseXML property returns the server response as an XML DOM object.<br>
+                    Using this property you can parse the response as an XML DOM object:</p>
+                <button type="button" onclick="loadXML();">Change Content XML</button>
+            </div>
+            <p id="demo3"></p>
+        </div>
+    </body>
+</html>
