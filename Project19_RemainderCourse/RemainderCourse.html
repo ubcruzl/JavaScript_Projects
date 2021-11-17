@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+      fade-in effect on page load using JavaScript
+    </title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js"></script>
+    <script type="text/javascript">
+        window.onload = fadeIn;
+  
+        function fadeIn() {
+            var fade = document.getElementById("title");
+            var opacity = 0;
+            var intervalID = setInterval(function() {
+  
+                if (opacity < 1) {
+                    opacity = opacity + 0.1
+                    fade.style.opacity = opacity;
+                } else {
+                    clearInterval(intervalID);
+                }
+            }, 200);
+        }
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+        $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+        }, 3000);
+
+    </script>
+</head>
+  
+<body id="body"> 
+    <div class="main" id="section1">
+        <h2>Section 1</h2>
+        <p>Click on the link to see the "smooth" scrolling effect.</p>
+        <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+        <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+        <!--FADE CHALLENGE -->
+        <h1 id="title" style="opacity:0; font-size:5vw;color: green; text-align: center;">Centro Ceremonial Mazahua</h1> <!--The text size can be set with a vw unit, which means the "viewport width".--> 
+
+        <!-- FORM CHALLENGE -->
+        <div class="content">
+            <form name="form1">
+                <label for="fname">First name:</label><br> <input type="text" id="fname" name="fname" value=""><br>
+                <label for="lname">Last name:</label><br> <input type="text" id="lname" name="lname" value=""><br>
+                <label for="email">Email:</label><br> <input type="text" id="email" name="email" value=""><br>
+                <label for="phone">Phone:</label><br> <input type="text" id="phone" name="phone" value=""><br>
+                <button type="button" onclick="phoneNumber(document.form1.phone)" >Submit</button>
+            </form>
+        </div>
+        <!-- POP CONTACT FORM CHALLENGE-->
+        <div class="content">
+            <h2>Popup Form</h2>
+            <p>Click on the button at the bottom of this page to open the login form.</p>
+            <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+            <button class="open-button" onclick="openForm()">Open Form</button>
+        </div>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+        
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="main" id="section2">
+        <!-- ANIMATION CHALLENGE-->
+        <h1>The @keyframes Rule</h1>
+        <img id="img" src="image.png" alt="Girl in a jacket" width="100" height="80">
+
+        <div class="single-featured-image-header"><img class="galleryImg" src="cultura.jpg"></div>
+
+        <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a> 
+
+        <p>If target="_blank", the link will open in a new browser window or tab.</p>
+        <h2>Section 2</h2>
+        <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+
+        <!-- BOOKMARK CHALLENGE -->
+        <h2>Section 1</h2>
+        <p>Click on the link to see the "smooth" scrolling effect.</p>
+        <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+        <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+
+         <!-- SLIDESHOW CHALLENGE -->
+         <div id="slideshow">
+            <div>
+              <img src="./Image/gastronomia.jpg">
+            </div>
+            <div>
+              <img src="./Image/sitios.jpg">
+            </div>
+            <div>
+              Pretty cool eh? This slide is proof the content can be anything.
+            </div>
+         </div>
+    </div>
+
+
+</body>
+</html>
